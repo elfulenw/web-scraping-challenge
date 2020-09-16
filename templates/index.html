@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission to Mars</title>
+</head>
+
+<body>
+  <div class="jumbotron text-center m-1 p-1">
+    <h1 class="display-3">Mission to Mars App</h1>
+    <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a>
+    </p>
+  </div>
+
+  <div class="container">
+    <h2 class="text-center">{{ data.title }}</h2>
+    <p class="lead">{{ data.paragraph }}</p>
+
+ 
+  <div class="row">
+    <div class='col-md-6'><img src="{{ data.featured_image }}" alt="featured-image" class="w-100"></div>
+  </div>
+
+  <div>
+    <div class="col-md-12"></div>
+      <h3>Mars Facts</h3>
+        <div style="max-width: 900px; max-height: 150px; font-size: 15px; margin-bottom: 65px;">
+          <table>{{ data.facts|safe}}</table>
+  </div>
+
+      </div>
+    </div>    
+  </div>
+</div>
+<br>
+<div class="container-fluid">
+<div class="jumbotron">
+<h1><i class="text-center" aria-hidden="true"></i> Mars Hemispheres</h1>
+</div>
+</div>  
+  <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12">
+            <h3> {{data.hemi[0]["title"]}} </h3>
+            <img src={{data.hemi [0][img_url]}} style="max-width:100%;
+              height:auto;"/>
+          </div>
+          <div class="col-md-12">
+            <h3> {{data.hemi[1]["title"]}} </h3>
+            <img src={{data.hemi[1][img_url]}} style="max-width:100%;
+              height:auto;"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12">
+            <h3> {{data.hemi[2]["title"]}} </h3>
+            <img src={{data.hemi[2][img_url]}} style="max-width:100%;
+              height:auto;"/>
+          </div>
+          <div class="col-md-12">
+            <h3> {{data.hemi[3]["title"]}} </h3>
+            <img src={{data.hemi[3][img_url]}} style="max-width:100%;
+              height:auto;"/>
+          </div>
+        </div>
+      </div>
+
+
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+</body>
+
+</html>
